@@ -1,0 +1,8 @@
+C:\Users\Павло\source\repos\LAB1\LAB1\bin\Debug\LAB1.exe.config
+C:\Users\Павло\source\repos\LAB1\LAB1\bin\Debug\LAB1.exe
+C:\Users\Павло\source\repos\LAB1\LAB1\bin\Debug\LAB1.pdb
+C:\Users\Павло\source\repos\LAB1\LAB1\obj\Debug\LAB1.csproj.AssemblyReference.cache
+C:\Users\Павло\source\repos\LAB1\LAB1\obj\Debug\LAB1.csproj.SuggestedBindingRedirects.cache
+C:\Users\Павло\source\repos\LAB1\LAB1\obj\Debug\LAB1.csproj.CoreCompileInputs.cache
+C:\Users\Павло\source\repos\LAB1\LAB1\obj\Debug\LAB1.exe
+C:\Users\Павло\source\repos\LAB1\LAB1\obj\Debug\LAB1.pdb
