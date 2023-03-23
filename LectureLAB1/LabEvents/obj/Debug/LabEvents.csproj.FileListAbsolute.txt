@@ -1,0 +1,8 @@
+C:\Users\Pavlo\Documents\VSProjects\LabEvents\LabEvents\bin\Debug\LabEvents.exe.config
+C:\Users\Pavlo\Documents\VSProjects\LabEvents\LabEvents\bin\Debug\LabEvents.exe
+C:\Users\Pavlo\Documents\VSProjects\LabEvents\LabEvents\bin\Debug\LabEvents.pdb
+C:\Users\Pavlo\Documents\VSProjects\LabEvents\LabEvents\obj\Debug\LabEvents.csproj.AssemblyReference.cache
+C:\Users\Pavlo\Documents\VSProjects\LabEvents\LabEvents\obj\Debug\LabEvents.csproj.SuggestedBindingRedirects.cache
+C:\Users\Pavlo\Documents\VSProjects\LabEvents\LabEvents\obj\Debug\LabEvents.csproj.CoreCompileInputs.cache
+C:\Users\Pavlo\Documents\VSProjects\LabEvents\LabEvents\obj\Debug\LabEvents.exe
+C:\Users\Pavlo\Documents\VSProjects\LabEvents\LabEvents\obj\Debug\LabEvents.pdb
