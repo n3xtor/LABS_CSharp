@@ -10,7 +10,7 @@ namespace LAB1
             double n = Convert.ToDouble(Console.ReadLine());
 
             // Створення binary, що буде містити перетворення
-            string binary = "";
+            string binary = "0,";
 
             for (int i = 0; i < 12; i++)
             {
@@ -119,10 +119,6 @@ namespace LAB1
 
             Console.WriteLine("Task 3: \n");
             Task3();
-
-
-            Console.Write("\n\nPress any button to continue...");
-            Console.ReadKey();
         }
     }
 }
