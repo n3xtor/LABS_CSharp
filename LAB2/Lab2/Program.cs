@@ -92,10 +92,6 @@ namespace BookStore
             {
                 Console.WriteLine(book);
             }
-
-
-            Console.Write("\nPress any button to continue...");
-            Console.ReadKey();
         }
     }
 }
