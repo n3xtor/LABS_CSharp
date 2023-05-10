@@ -20,7 +20,6 @@ namespace Lab4
         public event EventHandler<PageDamageEventArgs> PageDamage;
 
         // Код конструктора та властивостей
-
         public void DamagePage(int pageNumber, string damageType)
         {
             Console.WriteLine($"Page {pageNumber} was damaged ({damageType}).");
