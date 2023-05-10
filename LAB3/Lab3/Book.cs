@@ -1,22 +1,11 @@
-﻿using System;
+using System;
+using System.Collections;
+using System.Collections.Generic;
+
 
 namespace BookStore
 {
-    interface IPages
-    {
-        int Pages { get; set; }
-        int Volume();
-    }
-
-    interface IBookOperations
-    {
-        Book AddBooks(Book b);
-        bool CheckEquality(Book b1, Book b2);
-        bool CompareBooks(Book b1, Book b2);
-        string DisplayBookDetails(Book b);
-    }
-
-    class Book : IPages, IBookOperations
+    class Book : IEnumerable<Book>, IEqualityComparer<Book>
     {
         public string Author { get; }
         public string Title { get; }
@@ -63,36 +52,21 @@ namespace BookStore
             return b1.Volume() < b2.Volume();
         }
 
-        public Book AddBooks(Book b)
+        public static Book operator +(Book b1, Book b2)
         {
-            if (Author != b.Author)
+            if (b1.Author != b2.Author)
                 throw new ArgumentException("Cannot add books by different authors.");
 
-            if (Title != b.Title)
+            if (b1.Title != b2.Title)
                 throw new ArgumentException("Cannot add books with different titles.");
 
-            if (Publisher != b.Publisher)
+            if (b1.Publisher != b2.Publisher)
                 throw new ArgumentException("Cannot add books published by different publishers.");
 
-            if (Year != b.Year)
+            if (b1.Year != b2.Year)
                 throw new ArgumentException("Cannot add books published in different years.");
 
-            return new Book(Author, Title, Publisher, Year) { Pages = Pages + b.Pages };
-        }
-
-        public bool CheckEquality(Book b1, Book b2)
-        {
-            return b1 == b2;
-        }
-
-        public bool CompareBooks(Book b1, Book b2)
-        {
-            return b1 > b2;
-        }
-
-        public string DisplayBookDetails(Book b)
-        {
-            return b.ToString();
+            return new Book(b1.Author, b1.Title, b1.Publisher, b1.Year) { Pages = b1.Pages + b2.Pages };
         }
 
         public virtual int Pages { get; set; }
@@ -100,6 +74,28 @@ namespace BookStore
         public virtual int Volume()
         {
             return Pages / 32;
+        }
+
+        // Інтерфейс IEnumerable
+        public IEnumerator<Book> GetEnumerator()
+        {
+            yield return this;
+        }
+
+        IEnumerator IEnumerable.GetEnumerator()
+        {
+            return GetEnumerator();
+        }
+
+        // Інтерфейс IEqualityComparer
+        public bool Equals(Book x, Book y)
+        {
+            return x == y;
+        }
+
+        public int GetHashCode(Book obj)
+        {
+            return obj.GetHashCode();
         }
     }
 
