@@ -2,7 +2,6 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 
-
 namespace BookStore
 {
     class Book : IEnumerable<Book>, IEqualityComparer<Book>
