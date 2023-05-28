@@ -1,8 +1,9 @@
-﻿using System;
+using System;
 using System.Drawing;
+using System.Drawing.Drawing2D;
 using System.Windows.Forms;
 
-namespace BaloonGame
+namespace PopTheBall
 {
     public partial class MainForm : Form
     {
@@ -23,7 +24,7 @@ namespace BaloonGame
             penalty = 0;
             random = new Random();
             timer = new Timer();
-            timer.Interval = 700; // Інтервал в мілісекундах
+            timer.Interval = 700;
             timer.Tick += Timer_Tick;
         }
 
@@ -39,7 +40,7 @@ namespace BaloonGame
 
         private void GenerateBall()
         {
-            int diameter = random.Next(30, 100); // Випадковий діаметр кульки
+            int diameter = random.Next(70, 100); // Випадковий діаметр кульки
             int x = random.Next(0, ClientSize.Width - diameter); // Випадкове положення по осі X
             int y = random.Next(0, ClientSize.Height - diameter); // Випадкове положення по осі Y
 
@@ -84,42 +85,53 @@ namespace BaloonGame
     }
 
     public class Ball : PictureBox
-{
-    private Timer animationTimer;
-    private int animationDuration;
-    private MainForm parentForm;
-
-    public Ball(int x, int y, int diameter, MainForm parentForm)
     {
-        Location = new Point(x, y);
-        Size = new Size(diameter, diameter);
-        BackColor = Color.Red;
-        BorderStyle = BorderStyle.FixedSingle;
-        animationDuration = 700; // Тривалість анімації кульки. Змініть за потреби.
-        animationTimer = new Timer();
-        animationTimer.Interval = animationDuration;
-        animationTimer.Tick += AnimationTimer_Tick;
-        this.parentForm = parentForm;
-    }
+        private Timer animationTimer;
+        private int animationDuration;
+        private MainForm parentForm;
 
-    public void StartAnimation()
-    {
-        animationTimer.Start();
-    }
-
-    public void StopAnimation()
-    {
-        animationTimer.Stop();
-    }
-
-    private void AnimationTimer_Tick(object sender, EventArgs e)
-    {
-        StopAnimation();
-        parentForm.Invoke((MethodInvoker)delegate
+        public Ball(int x, int y, int diameter, MainForm parentForm)
         {
-            parentForm.PenaltyTimer_Tick(null, null);
-            parentForm.Controls.Remove(this);
-        });
+            Location = new Point(x, y);
+            Size = new Size(diameter, diameter);
+            BackColor = Color.Red;
+            BorderStyle = BorderStyle.FixedSingle;
+            animationDuration = 700; // Тривалість анімації кульки
+            animationTimer = new Timer();
+            animationTimer.Interval = animationDuration;
+            animationTimer.Tick += AnimationTimer_Tick;
+            this.parentForm = parentForm;
+        }
+
+        protected override void OnPaint(PaintEventArgs e)
+        {
+            base.OnPaint(e);
+
+            using (GraphicsPath path = new GraphicsPath())
+            {
+                path.AddEllipse(new Rectangle(0, 0, Width/2+20, Height));
+                Region = new Region(path);
+            }
+        }
+
+        public void StartAnimation()
+        {
+            animationTimer.Start();
+        }
+
+        public void StopAnimation()
+        {
+            animationTimer.Stop();
+        }
+
+        private void AnimationTimer_Tick(object sender, EventArgs e)
+        {
+            StopAnimation();
+            parentForm.Invoke((MethodInvoker)delegate
+            {
+                parentForm.PenaltyTimer_Tick(null, null);
+                parentForm.Controls.Remove(this);
+            });
+        }
     }
-}
 }
