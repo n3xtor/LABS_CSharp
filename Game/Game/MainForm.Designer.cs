@@ -1,6 +1,7 @@
 ﻿using System;
+using System.Drawing;
 
-namespace BaloonGame
+namespace PopTheBall
 {
     partial class MainForm
     {
@@ -16,10 +17,14 @@ namespace BaloonGame
         }
         public void PenaltyTimer_Tick(object sender, EventArgs e)
         {
-            penalty++;
+            if (currentBall.BackColor == Color.Green)
+            {
+                return; // Перевірка чи кулька зелена і виконання return
+            }
+            penalty +=10;
             penaltyLabel.Text = $"Penalty: {penalty}";
 
-            if (penalty >= 10) // Якщо штраф досягне 10, гра завершується
+            if (penalty >= 100) // Якщо штраф досягне 100, гра завершується
             {
                 EndGame();
             }
@@ -35,9 +40,10 @@ namespace BaloonGame
             // 
             this.scoreLabel.AutoSize = true;
             this.scoreLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.scoreLabel.Location = new System.Drawing.Point(12, 9);
+            this.scoreLabel.Location = new System.Drawing.Point(16, 11);
+            this.scoreLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.scoreLabel.Name = "scoreLabel";
-            this.scoreLabel.Size = new System.Drawing.Size(68, 20);
+            this.scoreLabel.Size = new System.Drawing.Size(86, 25);
             this.scoreLabel.TabIndex = 0;
             this.scoreLabel.Text = "Score: 0";
             // 
@@ -45,22 +51,24 @@ namespace BaloonGame
             // 
             this.penaltyLabel.AutoSize = true;
             this.penaltyLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.penaltyLabel.Location = new System.Drawing.Point(12, 39);
+            this.penaltyLabel.Location = new System.Drawing.Point(16, 48);
+            this.penaltyLabel.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.penaltyLabel.Name = "penaltyLabel";
-            this.penaltyLabel.Size = new System.Drawing.Size(78, 20);
+            this.penaltyLabel.Size = new System.Drawing.Size(99, 25);
             this.penaltyLabel.TabIndex = 1;
             this.penaltyLabel.Text = "Penalty: 0";
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
-            this.ClientSize = new System.Drawing.Size(399, 376);
+            this.BackColor = System.Drawing.Color.SeaShell;
+            this.ClientSize = new System.Drawing.Size(532, 463);
             this.Controls.Add(this.penaltyLabel);
             this.Controls.Add(this.scoreLabel);
             this.Cursor = System.Windows.Forms.Cursors.Cross;
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.MaximizeBox = false;
             this.MinimizeBox = false;
             this.Name = "MainForm";
