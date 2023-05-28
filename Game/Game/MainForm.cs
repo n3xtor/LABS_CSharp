@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Drawing;
 using System.Drawing.Drawing2D;
 using System.Windows.Forms;
@@ -26,7 +26,7 @@ namespace PopTheBall
             penalty = 0;
             random = new Random();
             timer = new Timer();
-            timer.Interval = 900;
+            timer.Interval = 1000;
             timer.Tick += Timer_Tick;
         }
 
@@ -111,7 +111,7 @@ namespace PopTheBall
             Size = new Size(diameter, diameter);
             BackColor = Color.Red;
             BorderStyle = BorderStyle.FixedSingle;
-            animationDuration = 900; // Тривалість анімації кульки
+            animationDuration = 1000; // Тривалість анімації кульки
             animationTimer = new Timer();
             animationTimer.Interval = animationDuration;
             animationTimer.Tick += AnimationTimer_Tick;
