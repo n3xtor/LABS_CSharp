@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 
-namespace BaloonGame
+namespace PopTheBall
 {
     static class Program
     {
