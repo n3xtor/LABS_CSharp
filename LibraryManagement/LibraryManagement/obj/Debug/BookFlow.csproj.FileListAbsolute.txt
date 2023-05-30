@@ -1,0 +1,13 @@
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe.config
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.exe
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\bin\Debug\LibraryManagement.pdb
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debug\BookFlow.csproj.AssemblyReference.cache
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debug\BookFlow.csproj.SuggestedBindingRedirects.cache
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.Properties.Resources.resources
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debug\BookFlow.csproj.GenerateResource.cache
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debug\BookFlow.csproj.CoreCompileInputs.cache
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.exe
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.pdb
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.MainForm.resources
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.SigninForm.resources
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.SignupForm.resources
