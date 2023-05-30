@@ -9,6 +9,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+//using BCrypt;
 
 namespace LibraryManagement
 {
@@ -36,7 +37,7 @@ namespace LibraryManagement
                 SendMessage(Handle, WM_NCLBUTTONDOWN, HTCAPTION, 0);
             }
         }
-        
+
         private void buttonSignup_Click(object sender, EventArgs e)
         {
             this.Hide();
@@ -55,8 +56,9 @@ namespace LibraryManagement
 
         private void RegisterUser(string username, string password)
         {
-            // Додаємо дані нового користувача до файлу
-            string userData = $"{username};{password}";
+            string hashedPassword = BCrypt.Net.BCrypt.HashPassword(password);
+
+            string userData = $"{username};{hashedPassword}";
             File.AppendAllText(usersFilePath, userData + Environment.NewLine);
         }
 

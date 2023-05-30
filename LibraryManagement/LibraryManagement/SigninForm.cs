@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Runtime.InteropServices;
 using System.IO;
+using BCrypt;
 
 namespace LibraryManagement
 {
@@ -56,17 +57,15 @@ namespace LibraryManagement
 
         private bool ValidateUser(string username, string password)
         {
-            // Основна логіка перевірки користувача
-            // Читаємо дані з файлу і порівнюємо з переданими значеннями
             string[] usersData = File.ReadAllLines(usersFilePath);
 
             foreach (string line in usersData)
             {
                 string[] userData = line.Split(';');
                 string storedUsername = userData[0];
-                string storedPassword = userData[1];
+                string storedHashedPassword = userData[1];
 
-                if (username == storedUsername && password == storedPassword)
+                if (username == storedUsername && BCrypt.Net.BCrypt.Verify(password, storedHashedPassword))
                 {
                     return true;
                 }

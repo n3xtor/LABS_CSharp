@@ -11,3 +11,14 @@ C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debu
 C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.SignupForm.resources
 C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.SigninForm.resources
 C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.MainForm.resources
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\bin\Debug\BCrypt.Net-Next.dll
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\bin\Debug\System.Buffers.dll
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\bin\Debug\System.Memory.dll
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\bin\Debug\BCrypt.Net-Next.xml
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\bin\Debug\System.Buffers.xml
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\bin\Debug\System.Memory.xml
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Pavlo\Documents\VSProjects\LibraryManagement\LibraryManagement\obj\Debug\LibraryManagement.csproj.CopyComplete
