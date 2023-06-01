@@ -1,15 +1,8 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows.Forms;
-//using BCrypt;
 
 namespace LibraryManagement
 {
@@ -38,13 +31,6 @@ namespace LibraryManagement
             }
         }
 
-        private void buttonSignup_Click(object sender, EventArgs e)
-        {
-            this.Hide();
-            SigninForm obj = new SigninForm();
-            obj.Show();
-        }
-
         private void buttonExit_Click(object sender, EventArgs e)
         {
             Application.Exit();
@@ -52,6 +38,13 @@ namespace LibraryManagement
         private void buttonMinimize_Click(object sender, EventArgs e)
         {
             WindowState = FormWindowState.Minimized;
+        }
+
+        private void buttonSignup_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            SigninForm obj = new SigninForm();
+            obj.Show();
         }
 
         private void RegisterUser(string username, string password)
@@ -131,6 +124,7 @@ namespace LibraryManagement
             }
             else if (!IsSecureData(textBoxUsername.Text, textBoxPassword.Text))
             {
+                labelPasswordTip.Visible = true;
                 MessageBox.Show("Registration data isn't secure enough.", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
             else

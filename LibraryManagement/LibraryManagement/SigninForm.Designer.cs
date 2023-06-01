@@ -184,6 +184,7 @@
             // 
             // logo
             // 
+            this.logo.Anchor = System.Windows.Forms.AnchorStyles.None;
             this.logo.Image = ((System.Drawing.Image)(resources.GetObject("logo.Image")));
             this.logo.Location = new System.Drawing.Point(152, 78);
             this.logo.Name = "logo";

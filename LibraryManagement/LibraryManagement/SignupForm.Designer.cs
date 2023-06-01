@@ -42,6 +42,7 @@
             this.labelRepPass = new System.Windows.Forms.Label();
             this.textBoxRepPass = new System.Windows.Forms.TextBox();
             this.pictureBoxLogo = new System.Windows.Forms.PictureBox();
+            this.labelPasswordTip = new System.Windows.Forms.Label();
             this.Header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxLogo)).BeginInit();
             this.SuspendLayout();
@@ -176,7 +177,7 @@
             // 
             this.textBoxPassword.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(192)))), ((int)(((byte)(50)))));
             this.textBoxPassword.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.textBoxPassword.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.textBoxPassword.Font = new System.Drawing.Font("Yu Gothic UI Semibold", 13.8F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))));
             this.textBoxPassword.ForeColor = System.Drawing.Color.White;
             this.textBoxPassword.Location = new System.Drawing.Point(85, 383);
             this.textBoxPassword.Name = "textBoxPassword";
@@ -217,12 +218,26 @@
             this.pictureBoxLogo.TabIndex = 14;
             this.pictureBoxLogo.TabStop = false;
             // 
+            // labelPasswordTip
+            // 
+            this.labelPasswordTip.AutoSize = true;
+            this.labelPasswordTip.Font = new System.Drawing.Font("Yu Gothic UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.labelPasswordTip.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(255)))), ((int)(((byte)(128)))), ((int)(((byte)(0)))));
+            this.labelPasswordTip.Location = new System.Drawing.Point(10, 522);
+            this.labelPasswordTip.Name = "labelPasswordTip";
+            this.labelPasswordTip.Size = new System.Drawing.Size(438, 75);
+            this.labelPasswordTip.TabIndex = 22;
+            this.labelPasswordTip.Text = "Username: minimal length - 4 chars;\r\nPassword:  minimal length - 8 chars;\r\n      " +
+    "             1 uppercase char; 1 lowecase char; 1 digit\r\n";
+            this.labelPasswordTip.Visible = false;
+            // 
             // SignupForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(220)))), ((int)(((byte)(217)))));
             this.ClientSize = new System.Drawing.Size(500, 745);
+            this.Controls.Add(this.labelPasswordTip);
             this.Controls.Add(this.labelRepPass);
             this.Controls.Add(this.textBoxRepPass);
             this.Controls.Add(this.labelPassword);
@@ -262,5 +277,6 @@
         private System.Windows.Forms.Label labelRepPass;
         private System.Windows.Forms.TextBox textBoxRepPass;
         private System.Windows.Forms.Button buttonMinimize;
+        private System.Windows.Forms.Label labelPasswordTip;
     }
 }

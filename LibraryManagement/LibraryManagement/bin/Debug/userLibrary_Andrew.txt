@@ -1,0 +1,4 @@
+Pride and Prejudice;Jane Austen;Classic;1813;432;English
+Moby-Dick;Herman Melville;Adventure;1851;544;English
+The Great Gatsby;F. Scott Fitzgerald;Fiction;1925;180;English
+The Miserable Ones;Victor Hugo;Historical Fiction;1862;1463;French

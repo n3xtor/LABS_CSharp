@@ -1,0 +1,4 @@
+One Hundred Years of Solitude;Gabriel Garcia Marquez;Magic Realism;1967;417;Spanish
+Don Quixote;Miguel de Cervantes Saavedra;Satire;1605;863;Spanish
+La Storia;Elsa Morante;Historical Fiction;1974;720;Italian
+The Divine Comedy;Dante Alighieri;Epic;1320;798;Italian
